@@ -1,6 +1,7 @@
 /* -- Glow effect -- */
 
 const blob = document.getElementById("blob");
+const blob2 = document.getElementById("blob2");
 
 window.onpointermove = event => {
     const { clientX, clientY } = event;

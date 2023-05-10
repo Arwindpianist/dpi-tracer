@@ -14,7 +14,7 @@ body {
     background-color: var(--background);
     height: 100vh;
     margin: 0rem;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 @keyframes rotate {
@@ -31,6 +31,28 @@ body {
     }
 }
 
+@keyframes auto-rotate {
+    0% {
+        transform: translate(0vw, 50vh);
+    }
+
+    25% {
+        transform: translate(40vw, 10vh);
+    }
+
+    50% {
+        transform: translate(80vw, 30vh);s
+    }
+
+    75% {
+        transform: translate(70vw, 10vh);
+    }
+
+    100% {
+        transform: translate(0vw, 50vh);
+    }
+}
+
 .maincenter {
     font-family: "bigerover";
     font-size: 2rem;
@@ -44,7 +66,7 @@ body {
     z-index: 3;
 }
 
-select{
+select {
     height: 3rem;
     background-color: #0000008a;
     color: var(--primary);
@@ -67,10 +89,23 @@ select{
     opacity: 0.8;
 }
 
+#blob2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30vmax;
+    height: 30vmax;
+    border-radius: 50%;
+    background: linear-gradient(to right, var(--tiertiary), var(--secondary));
+    animation: auto-rotate 25s infinite;
+    opacity: 0.8;
+}
+
+
 #blur {
     height: 100%;
     width: 100%;
-    position:absolute;
+    position: absolute;
     z-index: 2;
     backdrop-filter: blur(5vmax);
 }
